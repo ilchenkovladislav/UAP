@@ -5,12 +5,16 @@
   "type": "module",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "homepage": "https://ilchenkovladislav.github.io/UAP",
+    "predeploy": "gulp build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "autoprefixer": "^10.4.15",
     "browser-sync": "^2.29.3",
     "del": "^7.1.0",
