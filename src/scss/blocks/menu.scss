@@ -1,0 +1,124 @@
+.menu {
+    @media (max-width: 899px) {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+
+        &--opened {
+            width: 300px;
+            height: 100vh;
+            background-color: #fff;
+            box-shadow: 0 0 10px 1px rgba(#000, .1);
+        }
+    }
+
+    @media (min-width: 900px) {
+        display: grid;
+        grid-auto-flow: column;
+    }
+}
+
+.menu__button {
+    @media (max-width: 899px) {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        justify-self: end;
+        margin-top: 10px;
+        margin-right: 20px;
+        font-size: 0;
+    }
+
+    @media (min-width: 900px) {
+        display: none;
+    }
+}
+
+.menu__icon {
+    stroke: $text-black;
+
+    &-menu {
+        stroke: $text-white;
+    }
+}
+
+.menu__icon-menu,
+.menu__button--open .menu__icon-cross {
+    display: block;
+}
+
+.menu__icon-cross,
+.menu__button--open .menu__icon-menu {
+    display: none;
+}
+
+.menu__wrapper {
+    display: none;
+    
+    @media (max-width: 899px) {
+        &--opened {
+            display: block;
+        }
+    }
+
+    @media (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr min-content;
+    }
+}
+
+.menu__list {
+    list-style: none;
+
+    @media (min-width: 900px) {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+    }
+}
+
+.menu__item {
+    @media (min-width: 900px) {
+        text-align: center;
+    }
+}
+
+.menu__link {
+    display: block;
+    text-decoration: none;
+    color: $text-white;
+    padding: 20px 0;
+
+    &:hover {
+        color: #777;
+    }
+    
+    @media (max-width: 899px) {
+        color: $text-black;
+        padding-left: 20px;
+    }
+
+    @media (min-width: 900px) {
+        padding: 20px;
+    }
+}
+
+.menu__tel {
+    display: block;
+    text-decoration: none;
+    color: $text-white;
+    padding: 20px 0;
+    font-weight: 600;
+    white-space: nowrap;
+
+    &:hover {
+        color: #777;
+    }
+
+    @media (max-width: 899px) {
+        text-align: center;
+        color: $text-black;
+        margin-top: 30px;
+    }
+}
